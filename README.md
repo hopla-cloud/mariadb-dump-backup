@@ -1,18 +1,15 @@
 # mariadb-dump-backup
 
-
-
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-> Standard Readme Style
+> Project Description
 
-Simple scripts and Ansible role made for backuping MariaDB or MySQL databases with dumps. Usable with Acronis Backup cloud (pre-script) or in standalone.
+Simple scripts and Ansible role made for backing up MariaDB or MySQL databases. Works with Acronis Backup cloud (pre-script) or in standalone.
 
 This repository contains:
 
 1. Bash script for dump MariaDB/MySQL databases.
 2. Ansible role for push configuration.
-
 
 ## Table of Contents
 
@@ -50,12 +47,14 @@ $ sudo ./init-config.sh
 
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/RichardLitt/standard-readme/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/hopla-cloud/mariadb-dump-backup/issues/new) or submit PRs.
 
-Standard Readme follows the [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
+Hopla.cloud projects follows the [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
 
 ### Contributors
 
-
+You can find the projects contributors [here](https://github.com/hopla-cloud/mariadb-dump-backup/graphs/contributors).
 
 ## License
+
+Licensed under GNU General Public License version 3.
