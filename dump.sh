@@ -16,7 +16,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # import config file
 
-source /root/mysql_backup/mysql_backup.conf
+source /root/.mysql_backup/mysql_backup.conf
 TIMESTAMP=$(date +%Y%m%d-%H%M)
  
 # List databases to dump
@@ -29,4 +29,4 @@ for db in $databases; do
 done
 
 # Delete dump
-find $BACKUP_DIR/ -type f -cmin +660 -exec rm -rf {} \;
+find $BACKUP_DIR/ -type f -cmin +$RETENTION -exec rm -rf {} \;
