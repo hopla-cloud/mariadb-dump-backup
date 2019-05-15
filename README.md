@@ -56,6 +56,6 @@ Standard Readme follows the [Contributor Covenant](http://contributor-covenant.o
 
 ### Contributors
 
-<a href="graphs/contributors"><img src="https://opencollective.com/standard-readme/contributors.svg?width=890&button=false" /></a>
+
 
 ## License
