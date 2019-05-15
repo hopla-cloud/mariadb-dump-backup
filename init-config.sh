@@ -26,15 +26,22 @@ function default_value() {
         fi
 }
 
-# Create directory
-mkdir -p /root/mysql_backup
-
 # Set config file path
-config_file=/root/mysql_backup/mysql_backup.conf
+config_file=/root/.mysql_backup/mysql_backup.conf
 
-# Create config file and empty it
-touch $config_file
-echo > $config_file
+if [ $config_file ] 
+then
+	# Set permission rw
+	chmod 660 $config_file
+	# Empty the file
+    echo > $config_file
+
+else
+    # Create directory
+	mkdir -p /root/.mysql_backup
+	# Create config file and empty it
+	touch $config_file
+fi
 
 # Set mysql backup path
 default_value BACKUP_DIR "/var/mysql_backup"
@@ -51,6 +58,11 @@ default_value MYSQLDUMPBIN "/usr/bin/mysqldump"
 MYSQLDUMPBIN=$var
 echo MYSQLDUMPBIN=$MYSQLDUMPBIN >> $config_file
 
+# Set retention (in minutes)
+default_value RETENTION "660"
+RETENTION=$var
+echo RETENTION=$RETENTION >> $config_file
+
 # Set mysql backup user
 default_value MYSQL_USER "backupuser"
 MYSQL_USER=$var
@@ -59,6 +71,9 @@ echo MYSQL_USER=$MYSQL_USER >> $config_file
 # Set mysql backup user password
 read -p "Enter the $MYSQL_USER password : " -s MYSQL_PASSWORD
 echo MYSQL_PASSWORD=$MYSQL_PASSWORD >> $config_file
+
+# Set permission r
+chmod 440 $config_file
 
 # Create mysql user
 echo -e "Creating "$MYSQL_USER" account...\nEntrer the mysql root password : "
