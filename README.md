@@ -4,12 +4,13 @@
 
 > Project Description
 
-Simple scripts and Ansible role made for backing up MariaDB or MySQL databases. Works with Acronis Backup cloud (pre-script) or in standalone.
+Simple shell scripts made for backing up MariaDB or MySQL databases.
+Works with Acronis Backup cloud (as pre-script) or in standalone.
 
 This repository contains:
 
-1. Bash script for dump MariaDB/MySQL databases.
-2. Ansible role for push configuration.
+1. Configuration script to generate configuration file (init-config.sh)
+2. Backup script for MariaDB/MySQL databases (dump.sh) 
 
 ## Table of Contents
 
