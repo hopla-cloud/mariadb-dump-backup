@@ -29,7 +29,7 @@ function default_value() {
 # Set config file path
 config_file=/root/.mysql_backup/mysql_backup.conf
 
-if [ $config_file ] 
+if [ -f $config_file ] 
 then
 	# Set permission rw
 	chmod 660 $config_file
