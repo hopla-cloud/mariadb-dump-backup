@@ -76,5 +76,5 @@ echo MYSQL_PASSWORD=$MYSQL_PASSWORD >> $config_file
 chmod 440 $config_file
 
 # Create mysql user
-echo -e "Creating "$MYSQL_USER" account...\nEntrer the mysql root password : "
+echo -e "Creating "$MYSQL_USER" account...\nEnter the mysql root password : "
 $MYSQLBIN -u root -p -e "GRANT LOCK TABLES, SELECT ON *.* TO '$MYSQL_USER'@'localhost' IDENTIFIED BY '$MYSQL_PASSWORD';"
