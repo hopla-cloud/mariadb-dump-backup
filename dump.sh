@@ -18,6 +18,9 @@
 
 source /root/.mysql_backup/mysql_backup.conf
 TIMESTAMP=$(date +%Y%m%d-%H%M)
+
+# Create backup directory 
+mkdir -p "$BACKUP_DIR"
  
 # List databases to dump
 databases=`$MYSQLBIN --user=$MYSQL_USER -p$MYSQL_PASSWORD -e "SHOW DATABASES;" | grep -Ev "(Database|information_schema|performance_schema|mysql)"`
